@@ -1,14 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
-import App from './routes/App.jsx'
 import '/public/index.css'
-import Login from './routes/Login.jsx';
-import Register from './routes/Register.jsx';
+import App from './routes/App.jsx'
+import Login from './routes/auth/Login.jsx';
+import Register from './routes/auth/Register.jsx';
+import Flut from './routes/games/Flut.jsx';
+import Recycling from './routes/games/Recycling.jsx';
+import Wasserarm from './routes/games/Wasserarm.jsx';
+import FlutGame from './routes/games/play/FlutGame.jsx';
+import RecyclingGame from './routes/games/play/RecyclingGame.jsx';
+import WasserarmGame from './routes/games/play/WasserarmGame.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +29,30 @@ const router = createBrowserRouter([
     path: "/auth/register",
     element: <Register/>,
   },
+  {
+    path: "/games/flut",
+    element: <Flut />,
+  },
+  {
+    path: "/games/recycling",
+    element: <Recycling />,
+  },
+  {
+    path: "/games/wasserarm",
+    element: <Wasserarm />,
+  },
+  {
+    path: "/games/play/flut",
+    element: <FlutGame />,
+  },
+  {
+    path: "/games/info/recycling",
+    element: <RecyclingGame />,
+  },
+  {
+    path: "/games/info/wasseram",
+    element: <WasserarmGame />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

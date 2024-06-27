@@ -1,5 +1,12 @@
-import Header from "../components/Header"
+import Header from "../components/Header";
 
+/**
+ * Landing Page
+ * 
+ * @returns {JSX.Element}
+ * @author Jonas Schwind
+ * @version 0.1.0
+ */
 function App() {
   return (
     <>
@@ -7,17 +14,10 @@ function App() {
         <Header />
       </header>
       <main className= "container bg-base-100 p-4">
-        <h1 className="text-3xl font-bold underline">
-	  Klimaralley
-        </h1>
-        <ul>
-	  <li><a href="/play/flut">Die Flut Kommt</a></li>
-	  <li><a href="/play/recycling">Räumen Recyclen Rümplen</a></li>
-	  <li><a href="/play/wasserarm">Wasserarm Satt</a></li>
-        </ul>
+        Hier könnte ihre website stehen.
       </main>
     </>
   )
 }
 
-export default App
+export default App;
