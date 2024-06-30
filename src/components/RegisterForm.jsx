@@ -13,16 +13,14 @@ import Alert from '../components/Alert';
 function RegisterForm() {
 
   /**
- * @typedef {Object} RegisterBody
- * @property {string} username - The username of the user.
- * @property {string} email - The email of the user.
- * @property {string} password - The password of the user.
- * @property {string} verifyPassword - The repeated password for confirmation.
- */
-
-  /**
-   * @type {RegisterBody}
+   * @typedef {Object} RegisterBody
+   * @property {string} username - The username of the user.
+   * @property {string} email - The email of the user.
+   * @property {string} password - The password of the user.
+   * @property {string} verifyPassword - The repeated password for confirmation.
    */
+
+  /** @type {RegisterBody} */
   const [registerBody, setRegisterBody] = useState({
     username: '',
     email: '',
@@ -79,7 +77,7 @@ function RegisterForm() {
         return response.json().then((errorData) => {
           setAlertMessage(errorData.message || 'Unerwarteter Fehler');
           setAlertType('error');
-          console.log("Registration unsuccessful:", jsondata);
+          console.log("Registration unsuccessful:", errorData);
         });
       }
     })
