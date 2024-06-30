@@ -10,7 +10,7 @@ import Header from "../../../components/Header";
  * @version 0.0.1
  */
 function WasserarmGame() {
-	return (
+  return (
     <>
       <header>
         <Header />

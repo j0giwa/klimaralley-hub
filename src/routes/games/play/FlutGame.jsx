@@ -10,16 +10,16 @@ import Header from "../../../components/Header";
  * @version 0.0.1
  */
 function FlutGame() {
-	return (
-		<>
+  return (
+    <>
       <header>
         <Header />
       </header>
       <main className="container bg-base-100 p-4">
         <a href="/play/flut">Jetzt Spielen</a>
       </main>
-		</>
-	);
+    </>
+  );
 }
 
 export default FlutGame;
