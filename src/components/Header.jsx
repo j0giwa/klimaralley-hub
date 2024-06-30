@@ -9,15 +9,15 @@
 function Header() {
 
   return (
-    <div className="navbar bg-base-100 mb-4 border-solid border-b-2 border-base-200">
+    <div className="navbar bg-base-100 mb-7 border-solid border-b-2 border-base-200">
       <div className="flex-1">
-        <a className="btn btn-ghost text-3xl text-primary" href="/">Klimaralley</a>
+        <a className="btn btn-ghost text-xl md:text-3xl text-primary" href="/">Klimaralley</a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li><a href="/games/flut">Die Flut Kommt</a></li>
-          <li><a href="/games/recycling">Räumen Recyclen Rümplen</a></li>
-          <li><a href="/games/wasserarm">Wasserarm Satt</a></li>
+          <li><a className="hidden md:block" href="/games/flut">Die Flut Kommt</a></li>
+          <li><a className="hidden md:block" href="/games/recycling">Räumen Recyclen Rümplen</a></li>
+          <li><a className="hidden md:block" href="/games/wasserarm">Wasserarm Satt</a></li>
           <li>
             <details>
               <summary>Account</summary>

@@ -13,12 +13,12 @@ import Alert from '../components/Alert';
 function RegisterForm() {
 
   /**
-   * @typedef {Object} RegisterBody
-   * @property {string} username - The username of the user.
-   * @property {string} email - The email of the user.
-   * @property {string} password - The password of the user.
-   * @property {string} verifyPassword - The repeated password for confirmation.
-   */
+ * @typedef {Object} RegisterBody
+ * @property {string} username - The username of the user.
+ * @property {string} email - The email of the user.
+ * @property {string} password - The password of the user.
+ * @property {string} verifyPassword - The repeated password for confirmation.
+ */
 
   /**
    * @type {RegisterBody}
@@ -30,8 +30,11 @@ function RegisterForm() {
     verifyPassword: '',
   });
 
+  /** @type {String} */
   const [alertMessage, setAlertMessage] = useState('');
+  /** @type {String} */
   const [alertType, setAlertType] = useState('');
+  /** @type {boolean} */
   const [showAlert, setShowAlert] = useState(false);
 
   /**
@@ -47,7 +50,7 @@ function RegisterForm() {
       [name]: value,
     });
   };
-
+ 
   /**
    * Handles the form submission.
    * Sends a POST request to the server with the form data.
