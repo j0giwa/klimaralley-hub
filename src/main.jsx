@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import '/public/index.css'
+import './index.css'
 import App from './routes/App.jsx'
 import Login from './routes/auth/Login.jsx';
 import Register from './routes/auth/Register.jsx';
