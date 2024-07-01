@@ -3,7 +3,8 @@ import Header from "../../../components/Header";
 /**
  * Die Flut Kommt info page
  * 
- * Contains Redirect to game.
+ *  Should be reached via QR-Code.
+ *  Contains Redirect to game.
  * 
  * @returns {JSX.Element}
  * @author Jonas Schwind

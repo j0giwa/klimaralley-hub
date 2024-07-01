@@ -36,9 +36,9 @@ function RegisterForm() {
   const [showAlert, setShowAlert] = useState(false);
 
   /**
-   * Handles changes to the input fields and updates the formData state.
+   * Handles input field changes and updates the formData state.
    * 
-   * @param {React.ChangeEvent<HTMLInputElement>} e - The change event from the input field.
+   * @param {React.ChangeEvent<HTMLInputElement>} e - input field change event
    */
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,10 +50,10 @@ function RegisterForm() {
   };
  
   /**
-   * Handles the form submission.
+   * Handles form submission.
    * Sends a POST request to the server with the form data.
    * 
-   * @param {React.FormEvent<HTMLFormElement>} e - The form submission event.
+   * @param {React.FormEvent<HTMLFormElement>} e - form submission event.
    * @returns {Promise<void>}
    */
   const handleSubmit = async (e) => {
@@ -98,7 +98,7 @@ function RegisterForm() {
   };
 
   return (
-    <div className="card w-96 bg-white shadow-xl m-auto p-6 rounded-lg">
+    <div className="card w-96 bg-base-100 shadow-xl m-auto p-6 rounded-lg">
       <h2 className="text-2xl font-bold text-center mb-4">Registrierung</h2>
       {showAlert && <Alert message={alertMessage} type={alertType} onClose={handleCloseAlert} />}
       <form className="space-y-4" onSubmit={handleSubmit}>

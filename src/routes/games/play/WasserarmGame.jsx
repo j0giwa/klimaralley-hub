@@ -3,6 +3,7 @@ import Header from "../../../components/Header";
 /**
  * Wasserarm-satt info page
  * 
+ * Should be reached via QR-Code.
  * Contains Redirect to game.
  * 
  * @returns {JSX.Element}
