@@ -10,12 +10,12 @@ import Footer from "../../components/Footer";
  */
 function Recycling() {
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <header>
         <Header />
       </header>
-      <main className="bg-base-100">
-        <div className="flex items-center justify-center">
+      <main className="bg-base-100 mb-auto">
+        <div className="items-center justify-center">
 	        <section className="w-4/5 m-auto p-6 shadow-xl rounded-lg">
             {/* TODO: Insert map */}
             <article class="prose">
@@ -33,7 +33,7 @@ function Recycling() {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 

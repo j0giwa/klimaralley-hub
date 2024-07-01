@@ -10,17 +10,17 @@ import Footer from "../components/Footer";
  */
 function App() {
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <header>
         <Header />
       </header>
-      <main className= "container bg-base-100 p-4">
+      <main className= "flex-row container bg-base-100 p-4 mb-auto">
         Hier könnte ihre website stehen.
       </main>
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   )
 }
 

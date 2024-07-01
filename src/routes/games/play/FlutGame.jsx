@@ -13,17 +13,17 @@ import Footer from "../../../components/Footer";
  */
 function FlutGame() {
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <header>
         <Header />
       </header>
-      <main className="container bg-base-100 p-4">
+      <main className="container bg-base-100 mb-auto p-4">
         <a href="/play/flut">Jetzt Spielen</a>
       </main>
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 

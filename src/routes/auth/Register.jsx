@@ -11,17 +11,17 @@ import RegisterForm from "../../components/RegisterForm";
  */
 function Register() {
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <header>
         <Header />
       </header>
-      <main className="bg-base-100">
+      <main className="bg-base-100 mb-auto">
         <RegisterForm />
       </main>
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 

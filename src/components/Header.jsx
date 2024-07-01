@@ -9,6 +9,7 @@ import React, { useState, useEffect } from 'react';
  */
 function Header() {
 
+  /** @type {boolean} */
   const [isdark, setIsdark] = useState(
     JSON.parse(localStorage.getItem('isdark'))
   );

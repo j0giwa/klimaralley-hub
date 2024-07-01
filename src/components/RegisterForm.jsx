@@ -98,7 +98,7 @@ function RegisterForm() {
   };
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl m-auto p-6 rounded-lg">
+    <div className="card w-96 bg-base-100 m-auto p-6 md:shadow-xl md:rounded-lg">
       <h2 className="text-2xl font-bold text-center mb-4">Registrierung</h2>
       {showAlert && <Alert message={alertMessage} type={alertType} onClose={handleCloseAlert} />}
       <form className="space-y-4" onSubmit={handleSubmit}>

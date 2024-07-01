@@ -10,17 +10,17 @@ import Footer from "../../components/Footer";
  */
 function Login() {
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <header>
         <Header />
       </header>
-      <main className="bg-base-100 h-full">
+      <main className="bg-base-100 mb-auto">
         <h1 className="text-3xl font-bold underline">Login</h1>
       </main>
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 

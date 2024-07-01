@@ -46,11 +46,11 @@ const router = createBrowserRouter([
     element: <FlutGame />,
   },
   {
-    path: "/games/info/recycling",
+    path: "/games/play/recycling",
     element: <RecyclingGame />,
   },
   {
-    path: "/games/info/wasseram",
+    path: "/games/play/wasserarm",
     element: <WasserarmGame />,
   }
 ]);
