@@ -1,4 +1,5 @@
 import Header from "../../../components/Header";
+import Footer from "../../../components/Footer";
 
 /**
  * Wasserarm-satt info page
@@ -19,6 +20,9 @@ function WasserarmGame() {
       <main className="container bg-base-100 p-4">
         <a href="/play/wasserarm">Jetzt Spielen</a>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

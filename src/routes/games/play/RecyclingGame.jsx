@@ -1,4 +1,5 @@
 import Header from "../../../components/Header";
+import Footer from "../../../components/Footer";
 
 /**
  * Räumen Recyclen Rümpeln game page
@@ -19,6 +20,9 @@ function RecyclingGame() {
       <main className="container bg-base-100 p-4">
         <a href="/play/recycling">Jetzt Spielen</a>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

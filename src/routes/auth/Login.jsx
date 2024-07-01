@@ -1,4 +1,5 @@
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 /**
  * Login Page
@@ -16,6 +17,9 @@ function Login() {
       <main className="bg-base-100 h-full">
         <h1 className="text-3xl font-bold underline">Login</h1>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

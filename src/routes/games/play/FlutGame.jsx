@@ -1,4 +1,5 @@
 import Header from "../../../components/Header";
+import Footer from "../../../components/Footer";
 
 /**
  * Die Flut Kommt info page
@@ -19,6 +20,9 @@ function FlutGame() {
       <main className="container bg-base-100 p-4">
         <a href="/play/flut">Jetzt Spielen</a>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }

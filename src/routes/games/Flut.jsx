@@ -1,4 +1,5 @@
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 /**
  * Die Flut Kommt game page
@@ -16,7 +17,7 @@ function Flut() {
       </header>
       <main className="bg-base-100">
         <div className="flex items-center justify-center">
-	  <section className="w-4/5 m-auto p-6 shadow-xl rounded-lg">
+	        <section className="w-4/5 m-auto p-6 shadow-xl rounded-lg">
             {/* TODO: Insert map */}
             <article class="prose">
               <h1 className="text-xl mb-2">R&auml;umen, Recyclen, R&uuml;mpeln</h1>
@@ -27,9 +28,12 @@ function Flut() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </article>
-	  </section>
+	        </section>
         </div>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 
