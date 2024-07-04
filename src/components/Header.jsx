@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { setCookie, getCookie } from '../lib/cookieUtils';
 
 /**
- * Landing  Page
+ * Header Component
  * 
  * @returns {JSX.Element}
  * @author Jonas Schwind
- * @version 0.1.0
+ * @version 0.3.5
  */
 function Header() {
 
   /** @type {boolean} */
   const [isdark, setIsdark] = useState(
-    JSON.parse(localStorage.getItem('isdark'))
+    JSON.parse(getCookie('isdark') || 'false')
   );
 
   useEffect(() => {
-    localStorage.setItem('isdark', JSON.stringify(isdark));
+    setCookie('isdark', JSON.stringify(isdark), { path: '/' });
   }, [isdark]);
 
   return (
