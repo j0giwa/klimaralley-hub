@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import LoginForm from "../../components/LoginForn";
 
 /**
  * Login Page
@@ -15,7 +16,7 @@ function Login() {
         <Header />
       </header>
       <main className="bg-base-100 mb-auto">
-        <h1 className="text-3xl font-bold underline">Login</h1>
+        <LoginForm />
       </main>
       <footer>
         <Footer />

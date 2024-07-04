@@ -16,7 +16,7 @@ function Wasserarm() {
       </header>
       <main className="bg-base-100 mb-auto">
         <div className="items-center justify-center">
-	        <section className="w-4/5 m-auto p-6 shadow-xl rounded-lg">
+	        <section className="md:w-4/5 m-auto p-6 md:shadow-xl md:rounded-lg">
             {/* TODO: Insert map */}
             <article class="prose">
               <h1 className="text-xl font-medium mb-2">Wasserarm Satt</h1>
