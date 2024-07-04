@@ -1,12 +1,18 @@
+import PropTypes from 'prop-types';
 
 /**
- * Alert Component
+ * Alert Component.
+ * 
+ * Shows an alert message.
  * 
  * @param {Object} props - The props of the component.
  * @param {string} props.message - The alert message to display.
- * @param {string} props.type - The type of the alert (e.g., 'success', 'error').
+ * @param {'info' | 'success' | 'warn' | 'error'} props.type - The type of the alert. (e.g., 'success', 'error').
  * @param {function} props.onClose - Function to call when the alert is closed.
  * @returns {JSX.Element}
+ * 
+ * @author Jonas Schwind
+ * @version 1.2.0
  */
 function Alert({ message, type = 'info', onClose }) {
   
@@ -33,5 +39,11 @@ function Alert({ message, type = 'info', onClose }) {
     </div>
   );
 }
+
+Alert.propTypes = {
+  message: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  onClose: PropTypes.func,
+};
 
 export default Alert;
