@@ -1,11 +1,13 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import CookieConsent from "../../components/CookieConsent";
 
 /**
  * Räumen Recyclen Rümpeln info page
  * 
  * @returns {JSX.Element}
  * @author Jonas Schwind
+ * @author Alexander Golüke
  * @version 0.0.1
  */
 function Recycling() {
@@ -29,6 +31,7 @@ function Recycling() {
             </article>
           </section>
         </div>
+        <CookieConsent />
       </main>
       <footer>
         <Footer />

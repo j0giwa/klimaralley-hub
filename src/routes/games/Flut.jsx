@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import CookieConsent from "../../components/CookieConsent";
 
 /**
  * Die Flut Kommt game page
@@ -7,6 +8,7 @@ import Footer from "../../components/Footer";
  * 
  * @returns {JSX.Element}
  * @author Jonas Schwind
+ * @author Alexander Golüke
  * @version 0.0.1
  */
 function Flut() {
@@ -30,6 +32,7 @@ function Flut() {
             </article>
           </section>
         </div>
+        <CookieConsent />
       </main>
       <footer>
         <Footer />

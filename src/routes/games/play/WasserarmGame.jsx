@@ -1,5 +1,6 @@
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
+import CookieConsent from "../../../components/CookieConsent";
 
 /**
  * Wasserarm-satt info page
@@ -9,7 +10,8 @@ import Footer from "../../../components/Footer";
  * 
  * @returns {JSX.Element}
  * @author Jonas Schwind
- * @version 0.0.1
+ * @author Alexander Golüke
+ * @version 0.1.1
  */
 function WasserarmGame() {
   return (
@@ -19,6 +21,7 @@ function WasserarmGame() {
       </header>
       <main className="container bg-base-100 mb-auto p-4">
         <a href="/play/wasserarm">Jetzt Spielen</a>
+        <CookieConsent />
       </main>
       <footer>
         <Footer />

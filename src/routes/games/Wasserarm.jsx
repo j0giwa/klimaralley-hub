@@ -1,11 +1,13 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import CookieConsent from "../../components/CookieConsent";
 
 /**
  * Wasserarm-satt info page
  * 
  * @returns {JSX.Element}
  * @author Jonas Schwind
+ * @author Alexander Golüke
  * @version 0.0.1
  */
 function Wasserarm() {
@@ -35,6 +37,7 @@ function Wasserarm() {
             </article>
           </section>
         </div>
+        <CookieConsent />
       </main>
       <footer>
         <Footer />

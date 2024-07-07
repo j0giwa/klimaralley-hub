@@ -1,13 +1,16 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import LoginForm from "../../components/LoginForm";
+import CookieConsent from "../../components/CookieConsent";
+
 
 /**
  * Login Page
  * 
  * @returns {JSX.Element}
  * @author Jonas Schwind
- * @version 0.1.0
+ * @author Alexander Golüke
+ * @version 0.2.0
  */
 function Login() {
   return (
@@ -17,6 +20,7 @@ function Login() {
       </header>
       <main className="bg-base-100 mb-auto">
         <LoginForm />
+        <CookieConsent />
       </main>
       <footer>
         <Footer />
