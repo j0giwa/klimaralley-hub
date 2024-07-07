@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
  * 
  * Shows an alert message.
  * 
- * @param {Object} props - The props of the component.
- * @param {string} props.message - The alert message to display.
- * @param {'info' | 'success' | 'warn' | 'error'} props.type - The type of the alert. (e.g., 'success', 'error').
- * @param {function} props.onClose - Function to call when the alert is closed.
+ * @param {Object} Alert - The props of the component.
+ * @param {string} Alert.message - The alert message to display.
+ * @param {'info' | 'success' | 'warn' | 'error'} Alert.type - The type of the alert. (e.g., 'success', 'error').
+ * @param {function} Alert.onClose - Function to call when the alert is closed.
  * @returns {JSX.Element}
  * 
  * @author Jonas Schwind
