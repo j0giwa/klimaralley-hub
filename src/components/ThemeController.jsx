@@ -3,16 +3,16 @@ import { getCookie, setCookie } from "../lib/cookieUtils";
 
 /**
  * Theme Controller Component
- * 
+ *
  * Cookie based toogling of light/dark mode.
- * 
+ *
  * @returns {JSX.Element}
  * @author Jonas Schwind
  * @version 1.0.0
  */
 function ThemeController() {
 
-	/** @type {boolean} */
+  /** @type {boolean} */
   const [isdark, setIsdark] = useState(
     JSON.parse(getCookie('isdark') || 'false')
   );
@@ -20,7 +20,7 @@ function ThemeController() {
   useEffect(() => {
     setCookie('isdark', JSON.stringify(isdark), { path: '/' });
   }, [isdark]);
-  
+
   return (
     <label className="grid cursor-pointer place-items-center">
       <input type="checkbox" className="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1"

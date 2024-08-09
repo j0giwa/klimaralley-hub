@@ -1,24 +1,25 @@
 import { useState } from 'react';
 import Alert from '../components/Alert';
+import setCookie from "../lib/cookieUtils";
 
 /**
  * Login Form Component
- * 
+ *
  * Handles User Login
- * 
+ *
  * @returns {JSX.Element}
  * @author Jonas Schwind
  * @author Alexander Golüke
  * @version 0.6.0
  */
 function LoginForm() {
-	/**
-	 * @typedef {Object} LoginBody
-	 * @property {string} email - The email of the user.
-	 * @property {string} password - The password of the user.
-	 */
+  /**
+   * @typedef {Object} LoginBody
+   * @property {string} email - The email of the user.
+   * @property {string} password - The password of the user.
+   */
 
-	/** @type {LoginBody} */
+  /** @type {LoginBody} */
 	const [loginBody, setLoginBody] = useState({
 		email: '',
 		password: '',
@@ -33,7 +34,7 @@ function LoginForm() {
 
 	/**
 	 * Handles input field changes and updates the formData state.
-	 * 
+	 *
 	 * @param {React.ChangeEvent<HTMLInputElement>} e - input field change event
 	 */
 	const handleChange = (e) => {
@@ -48,7 +49,7 @@ function LoginForm() {
 	/**
 	 * Handles form submission.
 	 * Sends a POST request to the server with the form data.
-	 * 
+	 *
 	 * @param {React.FormEvent<HTMLFormElement>} e - form submission event.
 	 * @returns {Promise<void>}
 	 */
@@ -62,29 +63,30 @@ function LoginForm() {
 			},
 			body: JSON.stringify(loginBody),
 		})
-			.then((response) => {
-				if (response.ok) {
-					return response.json().then((jsondata) => {
-						setAlertMessage('Nutzende wurden eingeloggt');
-						setAlertType('success');
-						console.log("Login successful:", jsondata);
-					});
-				} else {
-					return response.json().then((errorData) => {
-						setAlertMessage(errorData.message || 'Unerwarteter Fehler');
-						setAlertType('error');
-						console.log("Login unsuccessful:", errorData);
-					});
-				}
-			})
-			.catch((err) => {
-				setAlertMessage('Unerwarteter Fehler. Bitte erneut versuchen.');
-				setAlertType('error');
-				console.error(err.message);
-			})
-			.finally(() => {
-				setShowAlert(true);
-			});
+		.then((response) => {
+			if (response.ok) {
+				return response.json().then((jsondata) => {
+					setAlertMessage('Nutzende wurden eingeloggt');
+					setAlertType('success');
+					setCookie('jwt', jsondata.token);
+					console.log("Login successful:", jsondata);
+				});
+			} else {
+				return response.json().then((errorData) => {
+					setAlertMessage(errorData.message || 'Unerwarteter Fehler');
+					setAlertType('error');
+					console.log("Login unsuccessful:", errorData);
+				});
+			}
+		})
+		.catch((err) => {
+			setAlertMessage('Unerwarteter Fehler. Bitte erneut versuchen.');
+			setAlertType('error');
+			console.error(err.message);
+		})
+		.finally(() => {
+			setShowAlert(true);
+		});
 	};
 
 	const handleCloseAlert = () => {

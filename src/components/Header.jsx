@@ -1,13 +1,28 @@
 import ThemeController from './ThemeController';
+import { getCookie, removeCookie } from "../lib/cookieUtils";
 
 /**
  * Header Component
- * 
+ *
  * @returns {JSX.Element}
  * @author Jonas Schwind
  * @version 0.3.5
  */
 function Header() {
+
+  const [token, setToken] = useState();
+
+  useEffect(() => {
+    setToken(getCookie("jwt"));
+  }, [token]);
+
+  /**
+   * Performs a logout i.e. deletes the logintoken
+   */
+  const logout = () => {
+    removeCookie('jwt');
+    setToken(null);
+  };
 
   return (
     <div className="navbar bg-base-100 mb-7 border-solid border-b-2 border-base-200">
@@ -29,7 +44,11 @@ function Header() {
           <details>
             <summary>Account</summary>
             <ul className="bg-base-100 rounded-t-none p-2 z-50">
-              <li><a href="/auth/login/">Login</a></li>
+              <li>
+                  {
+                    token && <button onClick={logout()}>Logout</button> || <a href="/auth/login/">Login</a>
+                  }
+              </li>
               <li><a href="/auth/register">Register</a></li>
             </ul>
           </details>
