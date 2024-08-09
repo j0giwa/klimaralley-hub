@@ -1,4 +1,5 @@
-import ThemeController from './ThemeController';
+import { useState, useEffect } from "react";
+import ThemeController from "./ThemeController";
 import { getCookie, removeCookie } from "../lib/cookieUtils";
 
 /**
@@ -10,14 +11,17 @@ import { getCookie, removeCookie } from "../lib/cookieUtils";
  */
 function Header() {
 
-  const [token, setToken] = useState();
+  const [token, setToken] = useState("");
 
   useEffect(() => {
-    setToken(getCookie("jwt"));
-  }, [token]);
+    const jwtToken = getCookie("jwt");
+    if (jwtToken) {
+      setToken(jwtToken);
+    }
+  }, []); // Empty dependency array ensures this effect runs only once after the component mounts
 
   /**
-   * Performs a logout i.e. deletes the logintoken
+   * Performs a logout i.e. deletes the login token
    */
   const logout = () => {
     removeCookie('jwt');
@@ -45,9 +49,11 @@ function Header() {
             <summary>Account</summary>
             <ul className="bg-base-100 rounded-t-none p-2 z-50">
               <li>
-                  {
-                    token && <button onClick={logout()}>Logout</button> || <a href="/auth/login/">Login</a>
-                  }
+                {token ? (
+                  <button onClick={logout}>Logout</button>
+                ) : (
+                  <a href="/auth/login/">Login</a>
+                )}
               </li>
               <li><a href="/auth/register">Register</a></li>
             </ul>

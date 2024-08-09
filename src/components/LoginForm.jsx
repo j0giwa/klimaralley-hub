@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Alert from '../components/Alert';
-import setCookie from "../lib/cookieUtils";
+import { setCookie } from "../lib/cookieUtils";
 
 /**
  * Login Form Component
@@ -68,7 +68,7 @@ function LoginForm() {
 				return response.json().then((jsondata) => {
 					setAlertMessage('Nutzende wurden eingeloggt');
 					setAlertType('success');
-					setCookie('jwt', jsondata.token);
+					setCookie('jwt', jsondata.token, { path: '/' });
 					console.log("Login successful:", jsondata);
 				});
 			} else {
