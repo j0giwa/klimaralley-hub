@@ -66,7 +66,7 @@ function LoginForm() {
 		.then((response) => {
 			if (response.ok) {
 				return response.json().then((jsondata) => {
-					setAlertMessage('Nutzende wurden eingeloggt');
+					setAlertMessage('Sie wurden eingeloggt');
 					setAlertType('success');
 					setCookie('jwt', jsondata.token, { path: '/' });
 					console.log("Login successful:", jsondata);

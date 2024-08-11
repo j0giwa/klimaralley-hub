@@ -3,9 +3,9 @@ import Alert from '../components/Alert';
 
 /**
  * Register Form Component
- * 
+ *
  * Handles User Registration
- * 
+ *
  * @returns {JSX.Element}
  * @author Jonas Schwind
  * @version 0.6.0
@@ -37,7 +37,7 @@ function RegisterForm() {
 
   /**
    * Handles input field changes and updates the formData state.
-   * 
+   *
    * @param {React.ChangeEvent<HTMLInputElement>} e - input field change event
    */
   const handleChange = (e) => {
@@ -48,11 +48,11 @@ function RegisterForm() {
       [name]: value,
     });
   };
- 
+
   /**
    * Handles form submission.
    * Sends a POST request to the server with the form data.
-   * 
+   *
    * @param {React.FormEvent<HTMLFormElement>} e - form submission event.
    * @returns {Promise<void>}
    */
@@ -69,7 +69,7 @@ function RegisterForm() {
     .then((response) => {
       if (response.ok) {
         return response.json().then((jsondata) => {
-          setAlertMessage('Nutzende wurden registriert');
+          setAlertMessage('Sie wurden registriert');
           setAlertType('success');
           console.log("Registration successful:", jsondata);
         });
