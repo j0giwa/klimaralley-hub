@@ -32,7 +32,7 @@ function Header() {
     <div className="navbar bg-base-100 mb-7 border-solid border-b-2 border-base-200">
       <div className="navbar-start">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl md:text-3xl text-primary" href="/">Klimaralley</a>
+          <a className="btn btn-ghost text-xl md:text-3xl text-primary" href="/">Klimarallye</a>
         </div>
       </div>
       <div className="navbar-center">
