@@ -18,17 +18,16 @@ function App() {
   const markers = [
     {
       geocode: [52.0277, 8.9019],
-      popUp: "Hier befindet sich...1"
+      popUp: "Hier befindet sich 'Wasserarm-satt'"
     },
     {
       geocode: [52.019, 8.889],
-      popUp: "Hier befindet sich...2"
+      popUp: "Hier befindet sich 'Räumen Recyclen Rümpeln'"
     },
     {
       geocode: [52.023, 8.905],
-      popUp: "Hier befindet sich...3"
+      popUp: "Hier befindet sich 'Die Flut kommt'"
     },
-
   ]
 
   const customIcon = new Icon ({

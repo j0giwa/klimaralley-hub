@@ -4,16 +4,19 @@ import CookieConsent from "../../../components/CookieConsent";
 
 /**
  * Wasserarm-satt info page
- * 
+ *
  * Should be reached via QR-Code.
  * Contains Redirect to game.
- * 
+ *
  * @returns {JSX.Element}
  * @author Jonas Schwind
  * @author Alexander Golüke
  * @version 0.1.1
  */
 function WasserarmGame() {
+
+
+
   return (
     <div className="flex flex-col h-screen">
       <header>
