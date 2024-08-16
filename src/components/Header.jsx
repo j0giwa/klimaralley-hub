@@ -38,9 +38,9 @@ function Header() {
         </div>
         <div className="navbar-center">
           <ul className="menu menu-horizontal px-1">
-            <li><a className="hidden lg:block" href="/games/flut">Die Flut Kommt</a></li>
-            <li><a className="hidden lg:block" href="/games/recycling">Räumen Recyclen Rümplen</a></li>
-            <li><a className="hidden lg:block" href="/games/wasserarm">Wasserarm Satt</a></li>
+            <li><a key="flut" className="hidden lg:block" href="/games/flut">Die Flut Kommt</a></li>
+            <li><a key="recycling" className="hidden lg:block" href="/games/recycling">Räumen Recyclen Rümplen</a></li>
+            <li><a key="wasserarm" className="hidden lg:block" href="/games/wasserarm">Wasserarm Satt</a></li>
           </ul>
         </div>
         <div className="navbar-end">
@@ -65,12 +65,13 @@ function Header() {
         </div>
       </div>
       <div class="flex flex-nowrap justify-between px-10 pb-1 lg:hidden">
-          <a href="/games/flut">Flut</a>
-          <a href="/games/recycling">Recyclen</a>
-          <a href="/games/wasserarm">Wasserarm</a>
+        <a href="/games/flut">Flut</a>
+        <a href="/games/recycling">Recyclen</a>
+        <a href="/games/wasserarm">Wasserarm</a>
       </div>
     </div>
   );
 }
 
 export default Header;
+
