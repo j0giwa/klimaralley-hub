@@ -18,7 +18,7 @@ function Header() {
     if (jwtToken) {
       setToken(jwtToken);
     }
-  }, []); // Empty dependency array ensures this effect runs only once after the component mounts
+  }, []);
 
   /**
    * Performs a logout i.e. deletes the login token
