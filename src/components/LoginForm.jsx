@@ -118,7 +118,7 @@ function LoginForm() {
 						type="password" id="password" name="password" autoComplete="off" required
 						value={loginBody.password} onChange={handleChange} />
 				</div>
-				<button type="submit" className="btn btn-primary w-full">
+				<button type="submit" className="btn btn-primary w-full ">
 					Einloggen
 				</button>
 			</form>

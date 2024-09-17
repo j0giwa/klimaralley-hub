@@ -10,16 +10,14 @@ import CookieConsent from "react-cookie-consent";
 function CookieConsentFunction() {
   return (
     <CookieConsent
-      enableDeclineButton
-      buttonText="Alle akzeptieren"
+      buttonText="Notwendige akzeptieren"
       buttonStyle={{
         background: "#66cd8b",
         color: "#223c31",
         fontWeight: "bolder",
       }}
-      declineButtonText="Nur notwendige"
     >
-      Cookies werden benötigt um eine Optimale Benutzererfahrung zu gewähleisten. <a className="link link-hover text-[#BBFFBB]">Hier</a> erfahren Sie mehr
+      Cookies werden benötigt um eine Optimale Benutzererfahrung zu gewähleisten.
     </CookieConsent>
   )
 }

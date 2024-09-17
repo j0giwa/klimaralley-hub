@@ -13,6 +13,7 @@ function Header() {
 
   const [token, setToken] = useState("");
 
+
   useEffect(() => {
     const jwtToken = getCookie("jwt");
     if (jwtToken) {
@@ -20,13 +21,15 @@ function Header() {
     }
   }, []);
 
-  /**
-   * Performs a logout i.e. deletes the login token
-   */
   const logout = () => {
     removeCookie('jwt');
     setToken(null);
   };
+
+  /**
+   * Performs a logout i.e. deletes the login token
+   */
+
 
   return (
     <div className="mb-7 border-solid border-b-2 border-base-200">
