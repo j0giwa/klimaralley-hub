@@ -58,8 +58,11 @@ function RegisterForm() {
    */
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    fetch('http://localhost:8080/auth/register', {
+  
+    const api = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+    const method = '/auth/register';
+    
+    fetch(`${api}${method}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
