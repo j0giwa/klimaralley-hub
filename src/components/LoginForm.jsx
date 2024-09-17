@@ -56,7 +56,10 @@ function LoginForm() {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		fetch('http://localhost:8080/auth/login', {
+    const api = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+    const method = '/auth/login';
+
+		fetch(`${api}${method}`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
